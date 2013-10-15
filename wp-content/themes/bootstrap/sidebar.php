@@ -1,0 +1,41 @@
+<?php if(get_the_title() != 'Contact') : ?>
+				<div id="sidebar1" class="fluid-sidebar sidebar span5" role="complementary">
+				
+					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+
+						<?php dynamic_sidebar( 'sidebar1' ); ?>
+
+					<?php else : ?>
+
+						<!-- This content shows up if there are no widgets defined in the backend. -->
+						
+						<div class="alert alert-message">
+						
+							<p><?php _e("Please activate some Widgets","bonestheme"); ?>.</p>
+						
+						</div>
+
+					<?php endif; ?>
+
+				</div>
+<?php else : ?>
+<div id="sidebar1" class="fluid-sidebar sidebar span5" role="complementary">
+
+    <?php if ( is_active_sidebar( 'sidebar3' ) ) : ?>
+
+        <?php dynamic_sidebar( 'sidebar3' ); ?>
+
+    <?php else : ?>
+
+        <!-- This content shows up if there are no widgets defined in the backend. -->
+
+        <div class="alert alert-message">
+
+            <p><?php _e("Please activate some Widgets","bonestheme"); ?>.</p>
+
+        </div>
+
+    <?php endif; ?>
+
+</div>
+<?php endif; ?>
